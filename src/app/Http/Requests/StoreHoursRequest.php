@@ -26,7 +26,6 @@ class StoreHoursRequest extends FormRequest
         return [
             'csv' => [
                 'required',
-                'mimes:csv,xlsx'
             ],
         ];
     }

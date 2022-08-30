@@ -3,6 +3,7 @@ namespace App\Http\Controllers\fileController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Symfony\Component\Console\Input\Input;
+use Symfony\Component\HttpFoundation\File\File;
 
 
 class FileUploaderController extends Controller
@@ -25,6 +26,9 @@ class FileUploaderController extends Controller
      */
     public function store(Request $request)
     {
+
+        $name = $request->file('file');
+
 
         return view('view-hours', ["test" => dump($request)]);
     }
